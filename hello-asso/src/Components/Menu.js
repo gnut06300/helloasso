@@ -1,9 +1,10 @@
-
+import Home from '../Views/Home';
 const menuItems = [
 {
     title: "Home",
-    url: "/",
+    url: Home,
     cName: "nav-links",
+
     
 },
 {
