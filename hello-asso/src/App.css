@@ -1,0 +1,91 @@
+/**** variable de la chart graphique du site ****/
+:root{
+    --blue: #3aaff3;
+    --green: #27e375;
+    --red: #ff5b5b;
+    --yellow: #dbbe16f3;
+    --orange: #ff9f1c;
+    --purple: #9c27b0;
+    --pink: #ff5b5b;
+    --brown: #795548;
+    --grey: #bdbdbd;
+    --white: #fff;
+    --black: #000;
+
+    --color-primary: #00a0e9;
+    --color-secondary: #d5d5d5;
+    --color-success: #12b383;
+    --color-info: #14a4a9;
+    --color-warning: #e9be00;
+    --color-danger: #e93200;
+    --color-light: #d6d6d6;
+    --color-dark: #040507;
+    --color-link: #72baca;
+    --color-link-hover: #517acc;
+
+    --linear-gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    --linear-gradient-success: linear-gradient(to right, var(--color-success), var(--color-secondary));
+    --linear-gradient-info: linear-gradient(to right, var(--color-info), var(--color-secondary));
+    --linear-gradient-warning: linear-gradient(to right, var(--color-warning), var(--color-secondary));
+    --linear-gradient-danger: linear-gradient(to right, var(--color-danger), var(--color-secondary));
+    --linear-gradient-light: linear-gradient(to right, var(--color-light), var(--color-secondary));
+    --linear-gradient-dark: linear-gradient(to right, var(--color-dark), var(--color-secondary));
+    --linear-gradient-link: linear-gradient(to right, var(--color-link), var(--color-secondary));
+    --linear-gradient-link-hover: linear-gradient(to right, var(--color-link-hover), var(--color-secondary));
+    
+    --font-family-sans-serif: 'Open Sans', sans-serif;
+    --font-family-serif: 'Roboto', sans-serif;
+    --font-family-monospace: 'Roboto Mono', monospace;
+
+    --font-size-base: 1rem;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1rem;
+    --font-size-h6: 0.75rem;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+    --font-size-xlarge: 1.5rem;
+    --font-size-xxlarge: 2rem;
+    --font-size-xxxlarge: 2.5rem;
+
+    --line-height-base: 1.5;
+    --line-height-small: 1.25;
+    --line-height-large: 1.75;
+    --line-height-xlarge: 2;
+
+    --letter-spacing-base: 0;
+    --letter-spacing-small: 0.25px;
+    --letter-spacing-large: 0.5px;
+    --letter-spacing-xlarge: 1px;
+
+    --border-radius-base: 0.25rem;
+    --border-radius-small: 0.125rem;
+    --border-radius-large: 0.5rem;
+    --border-radius-xlarge: 1rem;
+    --border-radius-xxlarge: 1.5rem;
+    --border-radius-xxxlarge: 2rem;
+
+    --border-width-base: 1px;
+    --border-width-small: 0.5px;
+    --border-width-large: 1px;
+
+    --box-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-large: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-xlarge: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-xxlarge: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    --box-shadow-base-hover: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-small-hover: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-large-hover: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-xlarge-hover: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-xxlarge-hover: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    --box-shadow-base-active: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-small-active: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-large-active: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --box-shadow-xlarge-active: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+}

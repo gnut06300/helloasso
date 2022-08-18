@@ -14,9 +14,7 @@ const Navbar = () => {
         };
 return (
         <nav className="navbar">
-            <h1 className="navbar-logo">
-            HelloAsso 
-            </h1>
+            <h1 className="navbar-logo">HelloAsso</h1>
                 <div className="menu-icon" onClick={handleClick}>
                     <i className={active ? "fas fa-times" : "fas fa-bars"}></i>
                 </div>
