@@ -1,19 +1,17 @@
-import Home from '../Views/Home';
+
 const menuItems = [
 {
-    title: "Home",
-    url: Home,
-    cName: "nav-links",
-
-    
+    title: "Accueil",
+    url: "/",
+    cName: "nav-links",   
 },
 {
-    title: "Services",
+    title: "Association",
     url: "/services",
     cName: "nav-links"
 },
 {
-    title: "Products",
+    title: "A propos",
     url: "/products",
     cName: "nav-links"
 },
