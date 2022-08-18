@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 //components
 import Button from "./Button";
-import Menu from './Menu';
+import Menu from './data/Menu';
 //css
 import "./styles/navbar.css";
 
