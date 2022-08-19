@@ -7,12 +7,12 @@ const menuItems = [
 },
 {
     title: "Association",
-    url: "/services",
+    url: "/association",
     cName: "nav-links"
 },
 {
     title: "A propos",
-    url: "/products",
+    url: "/about",
     cName: "nav-links"
 },
 {
