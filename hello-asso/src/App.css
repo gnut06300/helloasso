@@ -32,6 +32,8 @@
     --linear-gradient-dark: linear-gradient(to right, var(--color-dark), var(--color-secondary));
     --linear-gradient-link: linear-gradient(to right, var(--color-link), var(--color-secondary));
     --linear-gradient-link-hover: linear-gradient(to right, var(--color-link-hover), var(--color-secondary));
+
+    --linear-gradient-nav: linear-gradient(90deg,rgb(110, 94, 254) 20%,rgba(73, 63, 252, 1) 100%);
     
     --font-family-sans-serif: 'Open Sans', sans-serif;
     --font-family-serif: 'Roboto', sans-serif;

@@ -1,6 +1,6 @@
 import React from 'react';
 //component
-import Formulaire from '../Components/Formulaire';
+// import Association from '../Api/Services/Users';
 //css
 import './styles/home.css';
 
@@ -8,6 +8,7 @@ const Home = () => {
     return(
         <div>
             <div className='home'>
+
                 <img className='banner' src="https://cdn.helloasso.com/img/photos/croppedimage-f14ba18cac1b4d769886f10cdec8e683.png" alt="banner"/>
                 <h1 className='titre'>Hello ArtProd</h1>
                 <section className='description'>Art Prod : le promoteur de l’expression culturelle contemporaine sous toutes ses formes :<br/>• musiques actuelles et émergentes<br/>• spectacle vivant<br/>• nouvelles tendances artistiques, visuelles, décoratives et médiatiques<br/>• production d’événements et d’œuvres artistiques</section>
@@ -15,6 +16,7 @@ const Home = () => {
                 {/* <section>
                     <Formulaire/>
                 </section> */}
+
             </div>
         </div>
     );
