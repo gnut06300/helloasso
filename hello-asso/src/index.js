@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Views/Home';
 import About from './Views/About';
 import Contact from './Views/Contact';
-import Association from './Views/Association';
+import DashBoard from './Views/DashBoard';
 import Connection from './Views/Connection';
 // import Navigation from './Components/Navigation';
 
@@ -26,7 +26,7 @@ root.render(
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
-          <Route path="/dashboard" element={<Association/>}></Route>
+          <Route path="/dashboard" element={<DashBoard/>}></Route>
         </Routes>
   </Router>,
   </React.StrictMode>

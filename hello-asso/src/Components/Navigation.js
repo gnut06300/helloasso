@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 import Menu from './data/Menu';
 
 function Navigation() {
-    const [active, setActive] = useState(false);
+    const [active] = useState(false);
 return (
 <Navbar bg="light" expand="lg">
     <Container fluid>
