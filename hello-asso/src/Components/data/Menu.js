@@ -2,17 +2,12 @@
 const menuItems = [
 {
     title: "Accueil",
-    url: "/",
+    url: "/home",
     cName: "nav-links",   
 },
 {
-    title: "Association",
-    url: "/services",
-    cName: "nav-links"
-},
-{
     title: "A propos",
-    url: "/products",
+    url: "/about",
     cName: "nav-links"
 },
 {
@@ -21,9 +16,14 @@ const menuItems = [
     cName: "nav-links"
 },
 {
-    title: "Sign up",
-    url: "/signup",
-    cName: "nav-links-mobile"
+    title: "DashBoard",
+    url: "/dashboard",
+    cName: "nav-links"
+},
+{
+    title: "Login",
+    url: "/",
+    cName: "nav-links"
 }
 ];
 

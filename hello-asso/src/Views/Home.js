@@ -1,6 +1,6 @@
 import React from 'react';
 //component
-import Formulaire from '../Components/Formulaire';
+// import Association from '../Api/Services/Users';
 //css
 import './styles/home.css';
 
@@ -12,7 +12,11 @@ const Home = () => {
             </div>
             <div>
                 <section>
-                    <Formulaire/>
+                </section>
+            </div>
+            <div>
+                <section>
+                    {/* <Association/> */}
                 </section>
             </div>
         </div>
