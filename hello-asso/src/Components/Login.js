@@ -1,8 +1,10 @@
     import React,{ Component } from "react";
-    import Form from "react-bootstrap/FormGroup";
-    import Input from "react-bootstrap/InputGroup";
+    import Form from "react-bootstrap/Form";
     import CheckButton from "react-bootstrap/Button";
     import AuthService from "../Api/Services/authService";
+
+
+
     const required = value => {
     if (!value) {
         return (
@@ -69,22 +71,23 @@
     }
     render() {
         return (
-        <div className="col-md-12">
-            <div className="card card-container">
-            <img
-                src="https://www.webassoc.org/wp-content/uploads/2019/05/logo_helloasso.png"
-                alt="profile-img"
-                className="profile-img-card"
-            />
-            <Form
+        <div className="col-lg-8 p-3 mx-auto">
+            <div className="card card-container mx-auto shadow">
+                <img
+                    src="https://www.webassoc.org/wp-content/uploads/2019/05/logo_helloasso.png"
+                    alt="profile-img"
+                    className="profile-img-card"
+                />
+            <Form.Group
                 onSubmit={this.handleLogin}
                 ref={c => {
                 this.form = c;
                 }}
             >
-                <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <Input
+                <div className="form-group p-3">
+                <Form.Label tmlFor="username">Username </Form.Label>
+                <Form.Control
+                
                     type="text"
                     className="form-control"
                     name="username"
@@ -93,9 +96,9 @@
                     validations={[required]}
                 />
                 </div>
-                <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <Input
+                <div className="form-group p-3">
+                <Form.Label htmlFor="password">Password</Form.Label>
+                <Form.Control
                     type="password"
                     className="form-control"
                     name="password"
@@ -104,7 +107,7 @@
                     validations={[required]}
                 />
                 </div>
-                <div className="form-group">
+                <div className="form-group p-3">
                 <button
                     className="btn btn-primary btn-block"
                     disabled={this.state.loading}
@@ -128,7 +131,7 @@
                     this.checkBtn = c;
                 }}
                 />
-            </Form>
+            </Form.Group>
             </div>
         </div>
         );
