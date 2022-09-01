@@ -8,7 +8,7 @@ import Login from '../Components/Login';
 const Connection = () => {
     return(
         <>
-            <div className='connection'>
+            <div className='connection mt-5'>
                 <h1>Hello login</h1>
                 <Login/>
             </div>

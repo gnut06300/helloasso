@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     background: var( --linear-gradient-nav);
     height: 5.2rem;
     width: 100%;
@@ -28,7 +28,7 @@
     width: 100rem;
     justify-content: end;
 
-}
+} */
 
 .nav-links {
     color: #fff;
@@ -42,7 +42,7 @@
     transition: all 0.2s ease-out;
 }
 
-.fa-bars {
+/* .fa-bars {
     color: #fff;
 }
 
@@ -52,10 +52,10 @@
 
 .menu-icon {
     display: none;
-}
+} */
 
 /****landscap & mobile queries*****/
-@media only screen and (min-width : 321px ) and (max-width : 1024px) {
+/* @media only screen and (min-width : 321px ) and (max-width : 1024px) {
     .navbar {
         position: relative;
         width: 100%;
@@ -142,4 +142,4 @@
         Button {
         display: none;
         }
-}
+} */

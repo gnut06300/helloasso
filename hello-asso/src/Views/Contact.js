@@ -7,7 +7,7 @@ import './styles/home.css';
 const Contact = () => {
     return(
         <div>
-            <div className='contact'>
+            <div className='contact mt-5'>
                 <h1>Contact</h1>
             </div>
             <div>
