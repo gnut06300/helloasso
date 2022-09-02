@@ -1,4 +1,5 @@
 import React from 'react';
+
 //component
 // import Association from '../Api/Services/Users';
 //css
@@ -14,6 +15,7 @@ const Home = () => {
                 <div dangerouslySetInnerHTML={{ __html: "<iframe id='haWidget' allowtransparency='true' scrolling='auto' src='https://www.helloasso.com/associations/artprod/adhesions/membre-actif/widget' style='width: 100%; height: 900px; border: none;' />" }} /> 
                 
             </div>
+            {/* <Footer/> */}
         </div>
     );
 };

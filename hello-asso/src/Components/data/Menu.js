@@ -2,7 +2,7 @@
 const menuItems = [
 {
     title: "Accueil",
-    url: "/home",
+    url: "/",
     cName: "nav-links",   
 },
 {
@@ -22,7 +22,7 @@ const menuItems = [
 },
 {
     title: "Login",
-    url: "/",
+    url: "/login",
     cName: "nav-links"
 }
 ];

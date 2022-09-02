@@ -1,16 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+
 import Menu from './data/Menu';
 import './styles/navbar.css';
 
-function Navigation() {
-    const [active, setActive] = useState(false);
+const Navigation = () => {
+    // const [active, setActive] = useState(false);
 return (
 <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
     <Container fluid>
@@ -25,12 +26,12 @@ return (
         {/* <Nav className={active ? "nav-menu active" : "nav-menu"}>  */}
             {Menu.map((item, index) => {
                     return (
-                    // <Nav.Link className='active' key={index} href={item.url}>{item.title}</Nav.Link> //trouver la condition pour mettre la class active
-                    <Nav.Link  key={index}>
-                        <Link to={item.url} className={item.cName}>
-                        {item.title}
-                        </Link>
-                    </Nav.Link>
+                    <Nav.Link as={NavLink} className={item.cName} key={index} to={item.url}>{item.title}</Nav.Link> //trouver la condition pour mettre la class active
+                    // <Nav.Link  key={index}>
+                    //     <Link to={item.url} className={item.cName}>
+                    //     {item.title}
+                    //     </Link>
+                    // </Nav.Link>
                     );
                 })}
         </Nav>

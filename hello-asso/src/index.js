@@ -10,6 +10,7 @@ import About from './Views/About';
 import Contact from './Views/Contact';
 import DashBoard from './Views/DashBoard';
 import Connection from './Views/Connection';
+import Footer from './Components/Footer';
 // import Navigation from './Components/Navigation';
 
 //css
@@ -20,15 +21,15 @@ root.render(
   <React.StrictMode>
     <Router>
         <App />
-        {/* <Navigation /> */}
         <Routes>
-          <Route exact path="/" element={<Connection/>}></Route>
-          <Route path="/home" element={<Home/>}></Route>
+          <Route exact path="/" element={<Home/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/dashboard" element={<DashBoard/>}></Route>
+          <Route path="/login" element={<Connection/>}></Route>
         </Routes>
   </Router>,
+  <Footer/>
   </React.StrictMode>
 );
 

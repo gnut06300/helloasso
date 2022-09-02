@@ -71,7 +71,7 @@
     }
     render() {
         return (
-        <div className="col-lg-8 p-3 mx-auto">
+        <div className="col-lg-8 p-3 mx-auto mb-5">
             <div className="card card-container mx-auto shadow">
                 <img
                     src="https://www.webassoc.org/wp-content/uploads/2019/05/logo_helloasso.png"
