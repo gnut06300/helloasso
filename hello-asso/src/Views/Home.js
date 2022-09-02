@@ -12,11 +12,15 @@ export default class Home extends React.Component{
         name: 'artprod'
     }
     componentDidMount(){
-        AssociationService.getInfo(this.name).then((response) => {
-            this.associations = response.data;
-            console.log(response.data);
+        AssociationService.getInfo(this.state.name)
+        .then(res => {
+            this.state.associations = res.data;
+            console.log(this.state.associations);
+        }).catch(err => {
+            console.log(err);
         });
     }
+
     render(){
         return(
             <div>

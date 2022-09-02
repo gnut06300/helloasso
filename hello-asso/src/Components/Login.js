@@ -1,136 +1,64 @@
-    import React,{ Component } from "react";
-    import Form from "react-bootstrap/FormGroup";
-    import Input from "react-bootstrap/InputGroup";
-    import CheckButton from "react-bootstrap/Button";
-    import AuthService from "../Api/Services/authService";
-    const required = value => {
-    if (!value) {
-        return (
-        <div className="alert alert-danger" role="alert">
-            Le champ est requis !
-        </div>
-        );
-    }
+import React,{ useState } from "react";
+import {Navigate} from "react-router-dom";
+import Form from "react-bootstrap/FormGroup";
+import Button from "react-bootstrap/Button";
+import loginService from "../Api/Services/Log";
+
+
+
+const Login = () => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [navigate, setNavigate] = useState(false);
+
+const submit = async (e) => {
+    e.preventDefault();
+    const data = {
+        email,
+        password
     };
-    export default class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.handleLogin = this.handleLogin.bind(this);
-        this.onChangeUsername = this.onChangeUsername.bind(this);
-        this.onChangePassword = this.onChangePassword.bind(this);
-        this.state = {
-        username: "",
-        password: "",
-        loading: false,
-        message: ""
-        };
+    try{
+        const response = await loginService.login(data);
+        console.log(response);
+        setNavigate(true);
+        if(response.status === 200) return setNavigate(true);
+        if(navigate) return <Navigate to="/dashboard" /> ;
+    } catch (e) {
+        console.log(e.getMessage());
+        
     }
-    onChangeUsername(e) {
-        this.setState({
-        username: e.target.value
-        });
-    }
-    onChangePassword(e) {
-        this.setState({
-        password: e.target.value
-        });
-    }
-    handleLogin(e) {
-        e.preventDefault();
-        this.setState({
-        message: "",
-        loading: true
-        });
-        this.form.validateAll();
-        if (this.checkBtn.context._errors.length === 0) {
-        AuthService.login(this.state.username, this.state.password).then(
-            () => {
-            this.props.history.push("/profil");
-            window.location.reload();
-            },
-            error => {
-            const resMessage =
-                (error.response &&
-                error.response.data &&
-                error.response.data.message) ||
-                error.message ||
-                error.toString();
-            this.setState({
-                loading: false,
-                message: resMessage
-            });
-            }
-        );
-        } else {
-        this.setState({
-            loading: false
-        });
-        }
-    }
-    render() {
-        return (
-        <div className="col-md-12">
-            <div className="card card-container">
-            <img
-                src="https://www.webassoc.org/wp-content/uploads/2019/05/logo_helloasso.png"
-                alt="profile-img"
-                className="profile-img-card"
-            />
-            <Form
-                onSubmit={this.handleLogin}
-                ref={c => {
-                this.form = c;
-                }}
-            >
-                <div className="form-group">
-                <label htmlFor="username">Username</label>
-                <Input
-                    type="text"
-                    className="form-control"
-                    name="username"
-                    value={this.state.username}
-                    onChange={this.onChangeUsername}
-                    validations={[required]}
-                />
-                </div>
-                <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <Input
-                    type="password"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.onChangePassword}
-                    validations={[required]}
-                />
-                </div>
-                <div className="form-group">
-                <button
-                    className="btn btn-primary btn-block"
-                    disabled={this.state.loading}
-                >
-                    {this.state.loading && (
-                    <span className="spinner-border spinner-border-sm"></span>
-                    )}
-                    <span>Login</span>
-                </button>
-                </div>
-                {this.state.message && (
-                <div className="form-group">
-                    <div className="alert alert-danger" role="alert">
-                    {this.state.message}
-                    </div>
-                </div>
-                )}
-                <CheckButton
-                style={{ display: "none" }}
-                ref={c => {
-                    this.checkBtn = c;
-                }}
-                />
-            </Form>
-            </div>
+
+    
+    return (
+    <div className="col-md-12">
+        <div className="card card-container">
+        <img
+            src="https://images.unsplash.com/photo-1616596871445-bb8290a7a2c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXNzb2NpYXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt="profile-img"
+            className="profile-img-card"
+        />
+        <Form onSubmit={submit}>
+            <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" onChange={e => setEmail(e.target.value)} />
+                <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password"  onChange={e => setPassword(e.target.value)} />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+            <Button variant="success" type="submit">
+                Submit
+            </Button>
+        </Form>
         </div>
-        );
+    </div>
+    );
     }
-    }
+}
+export default Login;

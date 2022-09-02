@@ -10,6 +10,7 @@ import About from './Views/About';
 import Contact from './Views/Contact';
 import DashBoard from './Views/DashBoard';
 import Connection from './Views/Connection';
+import './Api/httpService';
 // import Navigation from './Components/Navigation';
 
 //css
