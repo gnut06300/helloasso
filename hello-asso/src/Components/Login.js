@@ -27,6 +27,7 @@ const submit = async (e) => {
         console.log(e.getMessage());
         
     }
+}
 
     
     return (
@@ -56,9 +57,10 @@ const submit = async (e) => {
                 Submit
             </Button>
         </Form>
+
         </div>
     </div>
     );
     }
-}
+
 export default Login;

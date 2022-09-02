@@ -2,7 +2,7 @@ import React from 'react';
 //component
 // import Association from '../Api/Services/Users';
 //css
-import './styles/home.css';
+// import './styles/about.css';
 
 const About = () => {
     return(
@@ -16,11 +16,12 @@ const About = () => {
             </div>
             <div>
                 <section>
-                    {/* <Association/> */}
+                    
                 </section>
             </div>
         </div>
     );
 };
+
 
 export default About;
