@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
     cookieSession({
-        name: "epitech-session",
-        secret: "COOKIE_SECRET", 
+        client_id: "CLIENT_id",
+        client_secret: "Client_SECRET", 
        //utiliser une variable d'environnement
         httpOnly: true
     })
